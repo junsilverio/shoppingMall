@@ -1,0 +1,90 @@
+﻿@page "/"
+
+<PageTitle>Home – WMS Portal</PageTitle>
+
+<div class="page-breadcrumb mb-3">
+    <i class="fas fa-home me-1"></i> Home
+</div>
+
+<div class="module-header">
+    <div class="module-icon"><i class="fas fa-home"></i></div>
+    <div>
+        <h1>Dashboard</h1>
+        <p class="module-subtitle">Warehouse Management System Overview</p>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon stat-bg-blue"><i class="fas fa-boxes"></i></div>
+            <div>
+                <div class="stat-value">4,821</div>
+                <div class="stat-label">Total Inventory</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon stat-bg-green"><i class="fas fa-truck-loading"></i></div>
+            <div>
+                <div class="stat-value">132</div>
+                <div class="stat-label">Pending Receipts</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon stat-bg-orange"><i class="fas fa-shipping-fast"></i></div>
+            <div>
+                <div class="stat-value">87</div>
+                <div class="stat-label">Open Shipments</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon stat-bg-purple"><i class="fas fa-tasks"></i></div>
+            <div>
+                <div class="stat-value">24</div>
+                <div class="stat-label">Active Tasks</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-12 col-lg-6">
+        <div class="content-card">
+            <h5 class="fw-semibold mb-3"><i class="fas fa-bolt text-warning me-2"></i>Quick Links</h5>
+            <div class="list-group list-group-flush">
+                <a href="/operations/receiving" class="list-group-item list-group-item-action d-flex align-items-center gap-2">
+                    <i class="fas fa-truck-loading text-primary"></i> Receiving
+                </a>
+                <a href="/operations/shipment" class="list-group-item list-group-item-action d-flex align-items-center gap-2">
+                    <i class="fas fa-shipping-fast text-success"></i> Shipment
+                </a>
+                <a href="/operations/inventory" class="list-group-item list-group-item-action d-flex align-items-center gap-2">
+                    <i class="fas fa-boxes text-info"></i> Inventory
+                </a>
+                <a href="/operations/task-management" class="list-group-item list-group-item-action d-flex align-items-center gap-2">
+                    <i class="fas fa-tasks text-warning"></i> Task Management
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="content-card">
+            <h5 class="fw-semibold mb-3"><i class="fas fa-info-circle text-info me-2"></i>System Info</h5>
+            <table class="table table-sm mb-0">
+                <tbody>
+                    <tr><td class="text-muted">Framework</td><td>.NET 10 / Blazor</td></tr>
+                    <tr><td class="text-muted">Orchestration</td><td>.NET Aspire</td></tr>
+                    <tr><td class="text-muted">Observability</td><td>OpenTelemetry</td></tr>
+                    <tr><td class="text-muted">Theme</td><td>SmartAdmin-inspired</td></tr>
+                    <tr><td class="text-muted">Build Date</td><td>@DateTime.UtcNow.ToString("yyyy-MM-dd")</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

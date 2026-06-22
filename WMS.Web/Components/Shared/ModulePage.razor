@@ -1,0 +1,42 @@
+@* Reusable stub page layout *@
+<div class="page-breadcrumb mb-3">
+    @foreach (var (label, href, isLast) in Crumbs)
+    {
+        if (isLast)
+        {
+            <span>@label</span>
+        }
+        else
+        {
+            <a href="@href">@label</a>
+            <i class="fas fa-chevron-right mx-1 small"></i>
+        }
+    }
+</div>
+
+<div class="module-header">
+    <div class="module-icon" style="background:@IconColor">
+        <i class="@IconClass"></i>
+    </div>
+    <div>
+        <h1>@Title</h1>
+        <p class="module-subtitle">@Subtitle</p>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="text-center py-5 text-muted">
+        <i class="@IconClass fa-3x mb-3 d-block" style="color:@IconColor; opacity:.4"></i>
+        <h4>@Title</h4>
+        <p class="mb-0">This module is under construction. Content will appear here.</p>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Module";
+    [Parameter] public string Subtitle { get; set; } = "";
+    [Parameter] public string IconClass { get; set; } = "fas fa-cube";
+    [Parameter] public string IconColor { get; set; } = "#3498db";
+    [Parameter] public IEnumerable<(string label, string href, bool isLast)> Crumbs { get; set; }
+        = [("Home", "/", false), ("Module", "#", true)];
+}
