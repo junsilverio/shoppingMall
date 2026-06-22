@@ -1,0 +1,16 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.4.6">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>bed3aab0-9c97-4dcf-b9a5-0d1ca02d5ca8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WMS.ApiService\WMS.ApiService.csproj" />
+    <ProjectReference Include="..\WMS.Web\WMS.Web.csproj" />
+  </ItemGroup>
+
+</Project>

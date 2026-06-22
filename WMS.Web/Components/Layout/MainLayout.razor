@@ -1,0 +1,54 @@
+﻿@inherits LayoutComponentBase
+
+<div id="wrapper">
+    <!-- Page Header -->
+    <header class="page-header" role="banner">
+        <div class="page-logo">
+            <a href="/" class="page-logo-link d-flex align-items-center">
+                <i class="fas fa-warehouse text-white me-2"></i>
+                <span class="page-logo-text fw-bold text-white">WMS Portal</span>
+            </a>
+        </div>
+        <div class="header-btn ms-auto d-flex align-items-center gap-2 pe-3">
+            <button class="btn btn-sm btn-outline-light d-lg-none" id="sidebar-mobile-toggle" type="button"
+                    onclick="toggleSidebarMobile()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-light d-none d-lg-flex" id="sidebar-desktop-toggle" type="button"
+                    onclick="toggleSidebarDesktop()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="text-white-50 small d-none d-md-inline">Warehouse Management System</span>
+            <a href="#" class="btn btn-sm btn-outline-light" title="Current User">
+                <i class="fas fa-user-circle me-1"></i>Admin
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="page-sidebar" id="page-sidebar">
+        <div class="page-sidebar-inner">
+            <nav id="js-primary-nav" class="primary-nav">
+                <NavMenu />
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Content Area -->
+    <div class="page-content-wrapper">
+        <main id="js-page-content" role="main" class="page-content">
+            @Body
+        </main>
+        <footer class="page-footer" role="contentinfo">
+            <p class="mb-0 text-muted small">
+                &copy; @DateTime.Now.Year WMS Portal &mdash; Powered by Blazor .NET 10 + Aspire
+            </p>
+        </footer>
+    </div>
+</div>
+
+<div id="blazor-error-ui" class="alert alert-danger fixed-bottom m-3 d-none" role="alert">
+    An unhandled error has occurred.
+    <a href="" class="alert-link ms-2">Reload</a>
+    <button type="button" class="btn-close float-end" onclick="document.getElementById('blazor-error-ui').classList.add('d-none')"></button>
+</div>
